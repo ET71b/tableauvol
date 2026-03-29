@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSFS 2024 - Dispatch Center</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #e0e0e0; margin: 20px; }
+        h1 { color: #4caf50; border-bottom: 2px solid #333; padding-bottom: 10px; }
+        .filters { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; background: #1e1e1e; padding: 15px; border-radius: 8px; }
+        select { background: #333; color: white; border: 1px solid #555; padding: 8px; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9em; }
+        th, td { border: 1px solid #333; padding: 10px; text-align: left; }
+        th { background-color: #2c2c2c; color: #4caf50; position: sticky; top: 0; }
+        tr:nth-child(even) { background-color: #1a1a1a; }
+        tr:hover { background-color: #333; }
+        .negative-time { color: #ff5252; }
+        .positive-time { color: #4caf50; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>MSFS 2024 - Dispatch Center</h1>
+
+    <div class="filters">
+        <select id="filter-continent-dep"><option value="">Tous Continents Dép.</option></select>
+        <select id="filter-pays-dep"><option value="">Tous Pays Dép.</option></select>
+        <select id="filter-apt-dep"><option value="">Tous Aéroports Dép.</option></select>
+        <select id="filter-continent-arr"><option value="">Tous Continents Arr.</option></select>
+        <select id="filter-pays-arr"><option value="">Tous Pays Arr.</option></select>
+        <select id="filter-apt-arr"><option value="">Tous Aéroports Arr.</option></select>
+        <select id="filter-compagnie"><option value="">Toutes Compagnies</option></select>
+        <select id="filter-appareil">
+            <option value="">Tous Appareils</option>
+            <option value="A330-300">A330-300</option>
+            <option value="A350-900">A350-900</option>
+            <option value="A350-1000">A350-1000</option>
+            <option value="A320-200">A320-200</option>
+            <option value="A380">A380</option>
+            <option value="B777-300ER">B777-300ER</option>
+            <option value="B777-200ER">B777-200ER</option>
+        </select>
+        <select id="filter-temps-vol">
+            <option value="">Tous Temps de vol</option>
+            <option value="<2h">< 2h</option>
+            <option value="2h-4h">2h à 4h</option>
+            <option value="4h-6h">4h à 6h</option>
+            <option value="6h-8h">6h à 8h</option>
+            <option value=">8h">> 8h</option>
+        </select>
+        <select id="filter-temps-restant">
+            <option value="">Tous (Même expirés)</option>
+            <option value="30m-1h">30mins à 1h</option>
+            <option value="1h-2h">1h à 2h</option>
+            <option value=">2h">> 2h</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Jours</th>
+                <th>Cont. Dép</th>
+                <th>Pays Dép</th>
+                <th>Apt Dép</th>
+                <th>OACI Dép</th>
+                <th>Compagnie</th>
+                <th>Vol</th>
+                <th>Appareil</th>
+                <th>Dép. ZULU</th>
+                <th>Temps Vol</th>
+                <th>Arr. ZULU</th>
+                <th>Apt Arr</th>
+                <th>OACI Arr</th>
+                <th>Pays Arr</th>
+                <th>Cont. Arr</th>
+                <th>Temps Restant</th>
+                <th>Heure Loc. Dép</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

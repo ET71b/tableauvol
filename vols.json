@@ -1,0 +1,36 @@
+[
+  {
+    "jours_operation": [2, 4, 6],
+    "continent_dep": "Europe",
+    "pays_dep": "France",
+    "nom_dep": "Paris-Orly",
+    "oaci_dep": "LFPO",
+    "compagnie": "Air Caraïbes",
+    "vol": "TX542",
+    "appareil": "A350-900",
+    "heure_dep_zulu": "09:30",
+    "temps_vol": "08:45",
+    "nom_arr": "Princess Juliana",
+    "oaci_arr": "TNCM",
+    "pays_arr": "Sint Maarten",
+    "continent_arr": "Amérique du Nord et Centrale",
+    "fuseau_dep": "Europe/Paris"
+  },
+  {
+    "jours_operation": [1, 2, 3, 4, 5, 6, 7],
+    "continent_dep": "Europe",
+    "pays_dep": "France",
+    "nom_dep": "Paris-CDG",
+    "oaci_dep": "LFPG",
+    "compagnie": "Air France",
+    "vol": "AF022",
+    "appareil": "B777-300ER",
+    "heure_dep_zulu": "06:30",
+    "temps_vol": "08:15",
+    "nom_arr": "JFK New York",
+    "oaci_arr": "KJFK",
+    "pays_arr": "États-Unis",
+    "continent_arr": "Amérique du Nord et Centrale",
+    "fuseau_dep": "Europe/Paris"
+  }
+]
