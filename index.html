@@ -75,41 +75,38 @@
         }
 
         tr:nth-child(even) { background-color: var(--row-alt-bg); }
-        tr:hover { background-color: rgba(88, 166, 255, 0.1); } /* Survol bleuté léger */
+        tr:hover { background-color: rgba(88, 166, 255, 0.1); }
         
         .negative-time { color: var(--danger); font-weight: bold; }
         .positive-time { color: var(--success); font-weight: bold; }
         .compagnie-nom { font-weight: bold; color: #fff; }
+        
+        /* Message d'erreur ou d'état vide */
+        #status-message {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: var(--accent-color);
+            text-align: center;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
 
     <h1>MSFS 2024 - Flight Dispatch Center</h1>
+    <div id="status-message">Chargement des vols en cours...</div>
 
-    <table>
+    <table id="flights-table" style="display: none;">
         <thead>
             <tr>
                 <th>Jours</th>
-                <th>
-                    Cont. Dép
-                    <select id="filter-continent-dep"><option value="">Tous</option></select>
-                </th>
-                <th>
-                    Pays Dép
-                    <select id="filter-pays-dep"><option value="">Tous</option></select>
-                </th>
-                <th>
-                    Apt Dép
-                    <select id="filter-apt-dep"><option value="">Tous</option></select>
-                </th>
+                <th>Cont. Dép<select id="filter-continent-dep"><option value="">Tous</option></select></th>
+                <th>Pays Dép<select id="filter-pays-dep"><option value="">Tous</option></select></th>
+                <th>Apt Dép<select id="filter-apt-dep"><option value="">Tous</option></select></th>
                 <th>OACI Dép</th>
-                <th>
-                    Compagnie
-                    <select id="filter-compagnie"><option value="">Toutes</option></select>
-                </th>
+                <th>Compagnie<select id="filter-compagnie"><option value="">Toutes</option></select></th>
                 <th>Vol</th>
-                <th>
-                    Appareil
+                <th>Appareil
                     <select id="filter-appareil">
                         <option value="">Tous</option>
                         <option value="A330-300">A330-300</option>
@@ -122,8 +119,7 @@
                     </select>
                 </th>
                 <th>Dép. ZULU</th>
-                <th>
-                    Temps Vol
+                <th>Temps Vol
                     <select id="filter-temps-vol">
                         <option value="">Tous</option>
                         <option value="<2h">< 2h</option>
@@ -134,23 +130,13 @@
                     </select>
                 </th>
                 <th>Arr. ZULU</th>
-                <th>
-                    Apt Arr
-                    <select id="filter-apt-arr"><option value="">Tous</option></select>
-                </th>
+                <th>Apt Arr<select id="filter-apt-arr"><option value="">Tous</option></select></th>
                 <th>OACI Arr</th>
-                <th>
-                    Pays Arr
-                    <select id="filter-pays-arr"><option value="">Tous</option></select>
-                </th>
-                <th>
-                    Cont. Arr
-                    <select id="filter-continent-arr"><option value="">Tous</option></select>
-                </th>
-                <th>
-                    Temps Restant
+                <th>Pays Arr<select id="filter-pays-arr"><option value="">Tous</option></select></th>
+                <th>Cont. Arr<select id="filter-continent-arr"><option value="">Tous</option></select></th>
+                <th>Temps Restant
                     <select id="filter-temps-restant">
-                        <option value="">Tous (Même expirés)</option>
+                        <option value="">Tous</option>
                         <option value="30m-1h">30m à 1h</option>
                         <option value="1h-2h">1h à 2h</option>
                         <option value=">2h">> 2h</option>

@@ -1,6 +1,6 @@
 [
   {
-    "jours_operation": [1],
+    "jours_operation": [1, 7],
     "continent_dep": "Europe",
     "pays_dep": "France",
     "nom_dep": "Paris-CDG",
@@ -17,7 +17,7 @@
     "fuseau_dep": "Europe/Paris"
   },
   {
-    "jours_operation": [1],
+    "jours_operation": [1, 7],
     "continent_dep": "Europe",
     "pays_dep": "France",
     "nom_dep": "Paris-CDG",
@@ -34,7 +34,7 @@
     "fuseau_dep": "Europe/Paris"
   },
   {
-    "jours_operation": [1],
+    "jours_operation": [1, 7],
     "continent_dep": "Europe",
     "pays_dep": "France",
     "nom_dep": "Paris-CDG",
@@ -51,7 +51,7 @@
     "fuseau_dep": "Europe/Paris"
   },
   {
-    "jours_operation": [1],
+    "jours_operation": [1, 7],
     "continent_dep": "Europe",
     "pays_dep": "France",
     "nom_dep": "Paris-CDG",
@@ -68,7 +68,7 @@
     "fuseau_dep": "Europe/Paris"
   },
   {
-    "jours_operation": [1],
+    "jours_operation": [1, 7],
     "continent_dep": "Europe",
     "pays_dep": "France",
     "nom_dep": "Paris-CDG",
@@ -85,7 +85,7 @@
     "fuseau_dep": "Europe/Paris"
   },
   {
-    "jours_operation": [1],
+    "jours_operation": [1, 7],
     "continent_dep": "Europe",
     "pays_dep": "France",
     "nom_dep": "Paris-CDG",
@@ -102,7 +102,7 @@
     "fuseau_dep": "Europe/Paris"
   },
   {
-    "jours_operation": [1],
+    "jours_operation": [1, 7],
     "continent_dep": "Europe",
     "pays_dep": "France",
     "nom_dep": "Paris-CDG",
